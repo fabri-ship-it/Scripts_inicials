@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>MONEDA</title>
 </head>
 
 <body>

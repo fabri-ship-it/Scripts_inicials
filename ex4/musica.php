@@ -1,6 +1,7 @@
 <html>
 
 <head>
+    <title>MUSICA</title>
 </head>
 
 <body>
