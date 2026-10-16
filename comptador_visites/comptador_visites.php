@@ -21,8 +21,7 @@ setcookie("visites", $visites, time() + 31536000, "/");  // Guardem el nou valor
 ?>
 
 
-<!DOCTYPE html>
-<html lang="ca">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Botiga Online</title>
@@ -30,26 +29,22 @@ setcookie("visites", $visites, time() + 31536000, "/");  // Guardem el nou valor
 <body>
 
     <h1>Benvingut a la nostra botiga!</h1>
-    
-    <!-- Mostrem el comptador de visites -->
-    <p><strong>Comptador de visites:</strong> <?php echo $visites; ?></p>
+    <p>Comptador de visites:</<?php echo $visites; ?></p>  <!-- Mostrem el comptador de visites -->
 
-    <?php
-    // Si l'usuari ja ha fet una compra prèviament
-    if ($compra_feta) {
-        echo "<p style='color: green;'>Gràcies per la teva compra! Ja has utilitzat el teu descompte.</p>";
+    <?php   
+    if ($compra_feta) {  // Si l'usuari ja ha fet una compra prèviament
+        echo "<p'>Gràcies per la teva compra! Ja has utilitzat el teu descompte.</p>";
     } else {
-        // Si no ha comprat, mprovem les ofertes segons les visites
+        
         if ($visites >= 10) {
-            echo "<p style='color: blue;'><strong>Oferta exclusiva sols per a tu!</strong> Utilitza el codi <code>BOTIGA50</code> per obtenir un 50% de descompte en les teves primeres compres a la botiga.</p>";
-        } elseif ($visites >= 5) {
-            echo "<p style='color: orange;'><strong>Oferta exclusiva!</strong> Utilitza el codi <code>BOTIGA20</code> per obtenir un 20% de descompte en les teves primeres compres a la botiga.</p>";
+            echo "<p>Oferta exclusiva sols per a tu!</Utilitza el codi <code>BOTIGA50</code> per obtenir un 50% de descompte en les teves primeres compres a la botiga.</p>";
+        } elseif ($visites >= 5) {    // Si no ha comprat, mprovem les ofertes segons les visites
+            echo "<p;'>Oferta exclusiva!</Utilitza el codi <code>BOTIGA20</code> per obtenir un 20% de descompte en les teves primeres compres a la botiga.</p>";
         }
     }
     ?>
 
     <hr>
-
     <!-- Formulari de compra amb input per aplicar descompte -->
     <form method="POST" action="">
         <label>Codi de descompte:</label>
